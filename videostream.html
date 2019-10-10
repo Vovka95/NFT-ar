@@ -28,7 +28,7 @@
 <script>
 window.ARThreeOnLoad = () => {
 
-	ARController.getUserMediaThreeScene({maxARVideoSize: 320, cameraParam: './resources/data/camera_para-iPhone 5 rear 640x480 1.0m.dat',
+	ARController.getUserMediaThreeScene({maxARVideoSize: 320, cameraParam: './resources/data/camera_para.dat',
 	onSuccess: (arScene, arController, arCamera) => {
 
 		document.body.className = arController.orientation;
@@ -80,7 +80,7 @@ window.ARThreeOnLoad = () => {
 		torus.position.z = 0.5;
 		torus.rotation.x = Math.PI/2;
 
-		arController.loadNFTMarker('resources/dataNFT/bottle', (markerId) => {
+		arController.loadNFTMarker('resources/dataNFT/pinball', (markerId) => {
 			let markerRoot = arController.createThreeNFTMarker(markerId);
 			markerRoot.add(sphere);
 			arScene.scene.add(markerRoot);
