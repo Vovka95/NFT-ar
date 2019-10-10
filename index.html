@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>QRCode generator</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+
+		<link rel="stylesheet" href="style.css">
+		
+		<script type="text/javascript" src="./resources/qrcodejs/qrcode.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="qrcode-place">
+				<div>
+					<h3>Step 1</h3>
+					<p></p>
+				</div>
+				<div>
+					<div id="qrcode"></div>	
+				</div>
+			</div>
+			<div class="content-place">
+				<div>
+					<h3>Step 2</h3>
+					<p></p>
+				</div>
+				<div>
+					<img src="image/bottle.jpg">
+				</div>	
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+				let qrcode = new QRCode("qrcode", {
+				    text: "http://videostreaming",
+				    width: 350,
+				    height: 350,
+				    colorDark : "#000000",
+				    colorLight : "#ffffff",
+				    correctLevel : QRCode.CorrectLevel.H
+				});
+
+				qrcode.clear(); // clear the code.
+				qrcode.makeCode("http://videostreaming");
+		</script>
+	</body>
+</html>
