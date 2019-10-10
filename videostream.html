@@ -21,7 +21,6 @@ html,body {
 </head>
 <body>
 
-
 <script src="./resources/jsartoolkit5/threaded/artoolkitNft_td.min.js"></script>
 <script src="./resources/three-r103.js"></script>
 <script src="./resources/jsartoolkit5/artoolkit/artoolkit.three.js"></script>
@@ -87,7 +86,7 @@ window.ARThreeOnLoad = () => {
 			arScene.scene.add(markerRoot);
 		});
 
-		arController.loadMarker('resources/data/' + patternArray[i] + '.patt', function(markerId) {
+		arController.loadMarker('resources/data/patt.hiro', function(markerId) {
 			let markerRoot = arController.createThreeMarker(markerId);
 			markerRoot.add(torus);
 			arScene.scene.add(markerRoot);
